@@ -1,4 +1,5 @@
 import Form from '../components/Form';
+import SuccessAlert from '../components/SuccessAlert'
 
 const RegistrationPage = () => {
 
@@ -6,6 +7,7 @@ const RegistrationPage = () => {
       <div id="registration-page">
           <h2 className="display-6 text-center my-5">Registration</h2>
           <Form />
+          <SuccessAlert/>
       </div>
     );
 };

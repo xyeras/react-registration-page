@@ -1,7 +1,15 @@
+import { FormEvent, useContext } from 'react';
+import { GlobalContext } from '../context/GlobalContext';
+
 const Form = () => {
+
+  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+  }
+
     return (
       <div id="form">
-        <form>
+        <form action="submit" onSubmit={handleSubmit}>
           <div className="form-group row d-flex justify-content-center mt-3">
             <label htmlFor="inputFirstName" className="col-sm-2 col-form-label">First name</label>
             <div className="col-sm-4">
@@ -9,6 +17,7 @@ const Form = () => {
                 type="text"
                 className="form-control"
                 id="inputFirstName"
+                value=""
                 placeholder="First name"
                 required
                 />
@@ -21,6 +30,7 @@ const Form = () => {
                 type="text"
                 className="form-control"
                 id="inputLastName"
+                value=""
                 placeholder="Last name"
                 required
                 />
@@ -33,6 +43,7 @@ const Form = () => {
                 type="email"
                 className="form-control"
                 id="inputEmail"
+                value=""
                 placeholder="Email"
                 required/>
             </div>
@@ -44,13 +55,19 @@ const Form = () => {
                 type="password"
                 className="form-control"
                 id="inputPassword"
+                value=""
                 placeholder="Password"
                 required
                 />
             </div>
           </div>
           <div className="row d-flex justify-content-center mt-5">
-            <button type="button" className="col-sm-3 btn btn-primary btn-md btn-block">Submit</button>
+            <button
+              type="button"
+              className="col-sm-3 btn btn-primary btn-md btn-block"
+              >
+                Submit
+            </button>
           </div>
         </form>
       </div>

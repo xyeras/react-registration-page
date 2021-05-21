@@ -19,6 +19,11 @@ const RegistrationPage = () => {
 
       addUser({firstName, lastName, email, password});
 
+      setFirstName('');
+      setLastName('');
+      setEmail('');
+      setPassword('');
+
       setSuccess(true);
       setTimeout(() => {
       setSuccess(false);
@@ -41,7 +46,6 @@ const RegistrationPage = () => {
                 value={firstName}
                 onChange={event => setFirstName(event.target.value)}
                 placeholder="First name"
-                required
                 />
             </div>
           </div>
@@ -55,7 +59,6 @@ const RegistrationPage = () => {
                 value={lastName}
                 onChange={event => setLastName(event.target.value)}
                 placeholder="Last name"
-                required
                 />
             </div>
           </div>
@@ -69,7 +72,7 @@ const RegistrationPage = () => {
                 value={email}
                 onChange={event => setEmail(event.target.value)}
                 placeholder="Email"
-                required/>
+              />
             </div>
           </div>
           <div className="form-group row d-flex justify-content-center mt-3">
@@ -82,7 +85,6 @@ const RegistrationPage = () => {
                 value={password}
                 onChange={event => setPassword(event.target.value)}
                 placeholder="Password"
-                required
                 />
             </div>
           </div>

@@ -1,6 +1,4 @@
 import { useState, useContext, useEffect, FormEvent } from 'react';
-import Form from '../components/Form';
-import SuccessAlert from '../components/SuccessAlert'
 import { GlobalContext } from '../context/GlobalContext';
 
 const RegistrationPage = () => {
@@ -99,10 +97,10 @@ const RegistrationPage = () => {
           </div>
         </form>
 
-        <div className="row d-flex justify-content-center mt-3">
+        <div className="row offset-4 mt-3">
           {success ? (
               <div>
-                  <div className='col-sm-4 alert alert-success text-center' role='alert'>
+                  <div className='col-sm-6 alert alert-success text-center' role='alert'>
                   You've successfully added a new user!
                   </div>
               </div>
